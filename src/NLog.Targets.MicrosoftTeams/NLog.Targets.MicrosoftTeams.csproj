@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.0;net472</TargetFrameworks>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Description>A NLog target that writes to Microsoft Teams Channel via O365 Webhook Connector.</Description>
+    <Copyright>Copyright © Kin Tam 2021</Copyright>
+    <PackageProjectUrl>https://github.com/jedipi/NLog.MicrosoftTeams</PackageProjectUrl>
+    <PackageTags>NLog;MicrosoftTeams;target;</PackageTags>
+    <Company>Thy Consultants</Company>
+    <Authors>Kin Tam</Authors>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+    <PackageReference Include="NLog" Version="4.7.7" />
+  </ItemGroup>
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net472' ">
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NLog.Targets.MicrosoftTeams", "NLog.Targets.MicrosoftTeams\NLog.Targets.MicrosoftTeams.csproj", "{F1F6735E-83DD-40F8-B764-239F0278BC62}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NLog.Targets.MicrosoftTeams.Test", "NLog.Targets.MicrosoftTeams.Test\NLog.Targets.MicrosoftTeams.Test.csproj", "{09A2E244-AF76-4CE8-A29D-8FB2B7E9ED7D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F1F6735E-83DD-40F8-B764-239F0278BC62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1F6735E-83DD-40F8-B764-239F0278BC62}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1F6735E-83DD-40F8-B764-239F0278BC62}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1F6735E-83DD-40F8-B764-239F0278BC62}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09A2E244-AF76-4CE8-A29D-8FB2B7E9ED7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09A2E244-AF76-4CE8-A29D-8FB2B7E9ED7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09A2E244-AF76-4CE8-A29D-8FB2B7E9ED7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09A2E244-AF76-4CE8-A29D-8FB2B7E9ED7D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {00528C64-23B2-4727-9207-D3745563639F}
+	EndGlobalSection
+EndGlobal
