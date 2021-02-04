@@ -12,7 +12,7 @@ namespace NLog.MicrosoftTeams.Test
 
         static void Main(string[] args)
         {
-            _logger.Info("Info.");
+            //_logger.Info("Info.");
             _logger.Fatal(new ArgumentException("42"), "Fatal!");
 
             Console.ReadKey();
