@@ -8,6 +8,17 @@ A NLog target that write log to Microsoft Teams channel via O365 Webhook Connect
 - Support custom Teams card message title
 - Configure your Webhook URL in app.config or appsetting.json
 
+For more Information about webhhoks in Teams read:
+- https://docs.microsoft.com/en-us/microsoftteams/platform/webhooks-and-connectors/what-are-webhooks-and-connectors
+- https://docs.microsoft.com/en-us/microsoftteams/platform/webhooks-and-connectors/how-to/add-incoming-webhook
+
+# Installation [![NuGet downloads](https://img.shields.io/nuget/dt/NLog.Targets.MicrosoftTeams.svg)](https://www.nuget.org/packages/NLog.Targets.MicrosoftTeams)
+
+```cmd
+PM> Install-Package NLog.Targets.MicrosoftTeams
+```
+
+
 # Output
 ![Example NLog.Targets.MicrosoftTeams output](image/output.png)
 
