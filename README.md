@@ -63,3 +63,17 @@ NLog.config
          layout="[${level:uppercase=true}] ${logger} - ${message} ${all-event-properties}"
     />
 ```
+
+```xml
+
+<!-- This is an nlog.conf for Xamarin. -->
+<!-- WebhookURL can be specified inside the nlog.conf -->
+<!-- write logs to Microsoft Teams -->
+<target xsi:type="MicrosoftTeams" 
+         name="msTeams" 
+         WebhookUrl="Your Teams Webhook URL here"          
+         ApplicationName="Your Application Name"
+         CardTitle="Title - ${level:uppercase=true}: ${date} - [${logger}]"
+         layout="[${level:uppercase=true}] ${logger} - ${message} ${all-event-properties}"
+    />
+```
