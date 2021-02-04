@@ -5,7 +5,7 @@
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Description>A NLog target that writes to Microsoft Teams Channel via O365 Webhook Connector.</Description>
     <Copyright>Copyright © Kin Tam 2021</Copyright>
-    <PackageProjectUrl>https://github.com/jedipi/NLog.MicrosoftTeams</PackageProjectUrl>
+    <PackageProjectUrl>https://github.com/jedipi/NLog.Targets.MicrosoftTeams</PackageProjectUrl>
     <PackageTags>NLog;MicrosoftTeams;target;</PackageTags>
     <Company>Thy Consultants</Company>
     <Authors>Kin Tam</Authors>
