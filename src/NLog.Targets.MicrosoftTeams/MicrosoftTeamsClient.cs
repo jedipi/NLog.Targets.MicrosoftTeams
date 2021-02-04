@@ -10,7 +10,6 @@ namespace NLog.Targets.MicrosoftTeams
     public class MicrosoftTeamsClient
     {
         private readonly Uri _uri;
-        private readonly HttpClient _client = new HttpClient();
 
         public MicrosoftTeamsClient(string url)
         {
@@ -29,7 +28,7 @@ namespace NLog.Targets.MicrosoftTeams
             var message = CreateMessageCard(title, logMessage, facts);
             var json = JsonConvert.SerializeObject(message);
 
-            var response = await SendMessage(json);
+            var response = await SendMessage(json).ConfigureAwait(false);
             if (!response.IsSuccessStatusCode)
             {
                 throw new InvalidOperationException($"Rest Call Failed - {response.ReasonPhrase}");
@@ -48,7 +47,7 @@ namespace NLog.Targets.MicrosoftTeams
             using (var httpClient = new HttpClient())
             {
                 var targetUrl = _uri;
-                return await httpClient.PostAsync(targetUrl, messageContent);
+                return await httpClient.PostAsync(targetUrl, messageContent).ConfigureAwait(false);
             }
         }
 

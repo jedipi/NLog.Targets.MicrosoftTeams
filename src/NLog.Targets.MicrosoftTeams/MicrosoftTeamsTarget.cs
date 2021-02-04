@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 using NLog.Config;
+using NLog.Layouts;
 
 namespace NLog.Targets.MicrosoftTeams
 {
@@ -16,27 +17,34 @@ namespace NLog.Targets.MicrosoftTeams
         /// Ms Teams Incoming Webhook URL as string
         /// </summary>
         [RequiredParameter]
-        public string WebhookUrl { get; set; }
+        public Layout WebhookUrl { get; set; }
 
         /// <summary>
         /// Name of the Accplication<br/>
         /// Will be displayed as Title in the default card layout
         /// </summary>
         [RequiredParameter]
-        public string ApplicationName { get; set; }
+        public Layout ApplicationName { get; set; }
+
+        /// <summary>
+        /// The machine name of the computer
+        /// </summary>
+        [RequiredParameter]
+        public Layout MachineName { get; set; }
 
         /// <summary>
         /// CardTitle
         /// </summary>
         [RequiredParameter]
-        public string CardTitle { get; set; }
+        public Layout CardTitle { get; set; }
 
         // <summary>
         /// Construction
         /// </summary>        
         public MicrosoftTeamsTarget()
         {
-            IncludeEventProperties = true; // Include LogEvent Properties by default            
+            IncludeEventProperties = true; // Include LogEvent Properties by default
+            MachineName = "${machinename}";
         }
 
         /// <summary>
@@ -47,11 +55,13 @@ namespace NLog.Targets.MicrosoftTeams
         /// <returns></returns>
         protected override async Task WriteAsyncTask(LogEventInfo logEvent, CancellationToken cancellationToken)
         {
-
             var facts = new Dictionary<string, string>();
 
-            facts.Add("Application", ApplicationName);
-            facts.Add("Machine", Environment.MachineName);
+            var applicationName = RenderLogEvent(this.ApplicationName, logEvent);
+            var machineName = RenderLogEvent(this.MachineName, logEvent);
+
+            facts.Add("Application", applicationName);
+            facts.Add("Machine", machineName);
             facts.Add("Level", logEvent.Level.ToString());
             facts.Add("Logger", logEvent.LoggerName);
 
@@ -66,12 +76,10 @@ namespace NLog.Targets.MicrosoftTeams
 
             var title = RenderLogEvent(this.CardTitle, logEvent);
             string logMessage = RenderLogEvent(this.Layout, logEvent);
+            var webHookUrl = RenderLogEvent(this.WebhookUrl, logEvent);
 
-            var client = new MicrosoftTeamsClient(WebhookUrl);
-            await client.CreateAndSendMessage(title, logMessage, facts);
-        }
-
-        
-        
+            var client = new MicrosoftTeamsClient(webHookUrl);
+            await client.CreateAndSendMessage(title, logMessage, facts).ConfigureAwait(false);
+        }       
     }
 }
