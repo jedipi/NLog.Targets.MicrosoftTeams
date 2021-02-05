@@ -7,19 +7,28 @@ on:
     branches: [ master ]
 
 jobs:
-  build:
-
-    runs-on: ubuntu-latest
+  Build:
+    name: Build
+    runs-on: [windows-latest]
 
     steps:
     - uses: actions/checkout@v2
-    - name: Setup .NET
-      uses: actions/setup-dotnet@v1
-      with:
-        dotnet-version: 5.0.x
-    - name: Restore dependencies
-      run: dotnet restore
-    - name: Build
-      run: dotnet build --no-restore
-    - name: Test
-      run: dotnet test --no-build --verbosity normal
+      
+    - name: Setup MSBuild
+      uses: microsoft/setup-msbuild@v1
+
+    - name: Setup NuGet
+      uses: NuGet/setup-nuget@v1.0.5
+
+    - name: Restore NuGet packages - .NET Standard
+      run: nuget restore BugGuardian.AspNetCore/BugGuardian.AspNetCore.csproj
+
+    - name: Build the Solution - .NET Standard
+      run: msbuild BugGuardian.AspNetCore/BugGuardian.AspNetCore.csproj /p:Configuration=Release
+
+    - name: Restore NuGet packages - .NET Full Framework
+      run: nuget restore BugGuardian.AspNetCore.FullFxOnly.sln
+
+    - name: Build the Solution - .NET Full Framework
+      run: msbuild BugGuardian.AspNetCore.FullFxOnly.sln /p:Configuration=Release
+
