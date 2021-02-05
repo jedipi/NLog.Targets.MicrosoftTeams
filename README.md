@@ -14,7 +14,8 @@ For more Information about webhhoks in Teams read:
 - https://docs.microsoft.com/en-us/microsoftteams/platform/webhooks-and-connectors/what-are-webhooks-and-connectors
 - https://docs.microsoft.com/en-us/microsoftteams/platform/webhooks-and-connectors/how-to/add-incoming-webhook
 
-# Installation [![NuGet downloads](https://img.shields.io/nuget/dt/NLog.Targets.MicrosoftTeams.svg)](https://www.nuget.org/packages/NLog.Targets.MicrosoftTeams)
+# Installation 
+[![NuGet downloads](https://img.shields.io/nuget/dt/NLog.Targets.MicrosoftTeams)](https://www.nuget.org/packages/NLog.Targets.MicrosoftTeams)
 
 ```cmd
 PM> Install-Package NLog.Targets.MicrosoftTeams
