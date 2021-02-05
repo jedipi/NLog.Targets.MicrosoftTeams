@@ -2,6 +2,7 @@
 [![NuGet version (NLog.Targets.MicrosoftTeams)](https://img.shields.io/nuget/v/NLog.Targets.MicrosoftTeams.svg?style=flat)](https://www.nuget.org/packages/NLog.Targets.MicrosoftTeams)
 [![Build Status](https://dev.azure.com/jedipi/NLog.Targets.MicrosoftTeams/_apis/build/status/jedipi.NLog.Targets.MicrosoftTeams?branchName=master)](https://dev.azure.com/jedipi/NLog.Targets.MicrosoftTeams/_build/latest?definitionId=1&branchName=master)
 ![GitHub](https://img.shields.io/github/license/jedipi/NLog.Targets.MicrosoftTeams)
+[![NuGet downloads](https://img.shields.io/nuget/dt/NLog.Targets.MicrosoftTeams)](https://www.nuget.org/packages/NLog.Targets.MicrosoftTeams)
 # NLog.Targets.MicrosoftTeams
 A NLog target that write log to Microsoft Teams channel via O365 Webhook Connector.
 
@@ -14,8 +15,8 @@ For more Information about webhhoks in Teams read:
 - https://docs.microsoft.com/en-us/microsoftteams/platform/webhooks-and-connectors/what-are-webhooks-and-connectors
 - https://docs.microsoft.com/en-us/microsoftteams/platform/webhooks-and-connectors/how-to/add-incoming-webhook
 
+
 # Installation 
-[![NuGet downloads](https://img.shields.io/nuget/dt/NLog.Targets.MicrosoftTeams)](https://www.nuget.org/packages/NLog.Targets.MicrosoftTeams)
 
 ```cmd
 PM> Install-Package NLog.Targets.MicrosoftTeams
@@ -80,3 +81,7 @@ NLog.config
          layout="[${level:uppercase=true}] ${logger} - ${message} ${all-event-properties}"
     />
 ```
+<br><br>
+
+# Build History
+[![Build History](https://buildstats.info/github/chart/jedipi/NLog.Targets.MicrosoftTeams?branch=master)](https://github.com/jedipi/NLog.Targets.MicrosoftTeams/actions?query=branch%3Amaster)
