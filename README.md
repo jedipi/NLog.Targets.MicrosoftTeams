@@ -44,7 +44,7 @@ PM> Install-Package NLog.Targets.MicrosoftTeams
 
 NLog.config
 ```xml
-<!-- This is an nlog.conf for app.config -->
+<!-- Example for getting Webhook URL from app.config -->
 <!-- write logs to Microsoft Teams -->
 <target xsi:type="MicrosoftTeams" 
          name="msTeams" 
@@ -57,7 +57,7 @@ NLog.config
 
 ```xml
 
-<!-- This is an nlog.conf for appsetting.json -->
+<!-- Example for getting Webhook URL from appsetting.json -->
 <!-- write logs to Microsoft Teams -->
 <target xsi:type="MicrosoftTeams" 
          name="msTeams" 
@@ -70,8 +70,7 @@ NLog.config
 
 ```xml
 
-<!-- This is an nlog.conf for Xamarin. -->
-<!-- WebhookURL can be specified inside the nlog.conf -->
+<!-- Example for setting Webhook URL inside nlog.conf -->
 <!-- write logs to Microsoft Teams -->
 <target xsi:type="MicrosoftTeams" 
          name="msTeams" 
