@@ -3,13 +3,18 @@
 [![Build Status](https://dev.azure.com/jedipi/NLog.Targets.MicrosoftTeams/_apis/build/status/jedipi.NLog.Targets.MicrosoftTeams?branchName=master)](https://dev.azure.com/jedipi/NLog.Targets.MicrosoftTeams/_build/latest?definitionId=1&branchName=master)
 ![GitHub](https://img.shields.io/github/license/jedipi/NLog.Targets.MicrosoftTeams)
 [![NuGet downloads](https://img.shields.io/nuget/dt/NLog.Targets.MicrosoftTeams)](https://www.nuget.org/packages/NLog.Targets.MicrosoftTeams)
+[![HitCount](http://hits.dwyl.com/jedipi/NLogTargetsMicrosoftTeams.svg)](https://github.com/jedipi/NLog.Targets.MicrosoftTeams)
+##### Build History
+[![Build History](https://buildstats.info/github/chart/jedipi/NLog.Targets.MicrosoftTeams?branch=master)](https://github.com/jedipi/NLog.Targets.MicrosoftTeams/actions?query=branch%3Amaster)
+<br><br>
 # NLog.Targets.MicrosoftTeams
 A NLog target that write log to Microsoft Teams channel via O365 Webhook Connector.
 
-- Support for custom ApplicationName layout
-- Support custom Teams card message title
-- Options to configure your Webhook URL in NLog.conf, app.config, or appsetting.json
+- Support custom ApplicationName layout
+- Support custom Teams message card title
 - Support .Net Framework, .Net Core, and .Net Standard
+- Options to configure your Webhook URL in NLog.conf, app.config, or appsetting.json
+
 
 For more Information about webhhoks in Teams read:
 - https://docs.microsoft.com/en-us/microsoftteams/platform/webhooks-and-connectors/what-are-webhooks-and-connectors
@@ -22,10 +27,11 @@ For more Information about webhhoks in Teams read:
 PM> Install-Package NLog.Targets.MicrosoftTeams
 ```
 
+<br><br>
 
 # Output
 ![Example NLog.Targets.MicrosoftTeams output](image/output.png)
-
+<br><br>
 # Usage
 ```xml
 <!-- Example app.config -->
@@ -82,5 +88,12 @@ NLog.config
 ```
 <br><br>
 
-# Build History
-[![Build History](https://buildstats.info/github/chart/jedipi/NLog.Targets.MicrosoftTeams?branch=master)](https://github.com/jedipi/NLog.Targets.MicrosoftTeams/actions?query=branch%3Amaster)
+# Support
+If you've got value from any of the content which I have created, then I would also very much appreciate your support by buying me a beer.
+
+[![buy me a beer](https://www.ktbattery.com/donation-button.png)](https://www.paypal.com/donate/?hosted_button_id=WW82TCHX3P6EG)
+
+
+
+
+
