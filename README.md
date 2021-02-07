@@ -91,7 +91,7 @@ NLog.config
 # Support
 If you've got value from any of the content which I have created, then I would also very much appreciate your support by buying me a beer.
 
-[![buy me a beer](https://www.ktbattery.com/donation-button.png)](https://www.paypal.com/donate/?hosted_button_id=WW82TCHX3P6EG)
+[![buy me a beer](https://www.lifeofanarchitect.com/wp-content/uploads/2017/12/Ko-Fi-Image-Buy-Me-a-Beer.png)](https://www.paypal.com/donate/?hosted_button_id=WW82TCHX3P6EG)
 
 
 
