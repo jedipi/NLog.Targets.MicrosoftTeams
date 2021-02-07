@@ -26,3 +26,8 @@ jobs:
     - name: Test
       run: dotnet test --no-build --verbosity normal
       working-directory: src
+    - name: Publish
+      uses: brandedoutcast/publish-nuget@v2.5.5
+      with:
+        PROJECT_FILE_PATH: src/NLog.Targets.MicrosoftTeams/NLog.Targets.MicrosoftTeams.csproj
+        NUGET_KEY: ${{secrets.NUGET_API_KEY}}
