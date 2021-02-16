@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace NLog.Targets.MicrosoftTeams.CoreTest
+namespace NLog.Targets.MicrosoftTeams.Test
 {
     class Program
     {

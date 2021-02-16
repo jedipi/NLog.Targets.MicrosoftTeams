@@ -1,17 +1,17 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>netstandard2.0;net472;netcoreapp3.1</TargetFrameworks>
+    <TargetFrameworks>netstandard2.0;net472;netcoreapp3.1;net5.0</TargetFrameworks>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Description>A NLog target that writes to Microsoft Teams Channel via O365 Webhook Connector.</Description>
     <Copyright>Copyright © Kin Tam 2021</Copyright>
     <PackageProjectUrl>https://github.com/jedipi/NLog.Targets.MicrosoftTeams</PackageProjectUrl>
-    <PackageTags>NLog;MicrosoftTeams;target;</PackageTags>
+    <PackageTags>NLog;Microsoft Teams;target;Teams;nlog-target;nlogger</PackageTags>
     <Company>Thy Consultants</Company>
     <Authors>Kin Tam</Authors>
-    <AssemblyVersion>1.3.0.0</AssemblyVersion>
-    <FileVersion>1.3.0.0</FileVersion>
-    <Version>1.3.0</Version>
+    <AssemblyVersion>1.4.0.0</AssemblyVersion>
+    <FileVersion>1.4.0.0</FileVersion>
+    <Version>1.4.0</Version>
     <RepositoryUrl>https://github.com/jedipi/NLog.Targets.MicrosoftTeams</RepositoryUrl>
   </PropertyGroup>
 
