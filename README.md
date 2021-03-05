@@ -21,19 +21,21 @@ For more Information about webhhoks in Teams read:
 - https://docs.microsoft.com/en-us/microsoftteams/platform/webhooks-and-connectors/what-are-webhooks-and-connectors
 - https://docs.microsoft.com/en-us/microsoftteams/platform/webhooks-and-connectors/how-to/add-incoming-webhook
 
+# Output
+![Example NLog.Targets.MicrosoftTeams output](image/output.png)
 
-# Installation 
+# Getting Started
+### Installation 
+
+Add the NLog.Targets.MicrosoftTeams package from nuget to your project.
 
 ```cmd
 PM> Install-Package NLog.Targets.MicrosoftTeams
 ```
 
-<br><br>
+<br>
 
-# Output
-![Example NLog.Targets.MicrosoftTeams output](image/output.png)
-<br><br>
-# Usage
+### Usage
 ```xml
 <!-- Example app.config -->
 <?xml version="1.0" encoding="utf-8" ?>
@@ -87,7 +89,7 @@ NLog.config
          layout="[${level:uppercase=true}] ${logger} - ${message} ${all-event-properties}"
     />
 ```
-<br><br>
+
 
 # Support
 If you've got value from any of the content which I have created, then I would also very much appreciate your support by buying me a beer.
