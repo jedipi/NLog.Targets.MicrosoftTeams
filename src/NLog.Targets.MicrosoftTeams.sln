@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.30907.101
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NLog.Targets.MicrosoftTeams", "NLog.Targets.MicrosoftTeams\NLog.Targets.MicrosoftTeams.csproj", "{F1F6735E-83DD-40F8-B764-239F0278BC62}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NLog.Targets.MicrosoftTeams.CoreTest", "NLog.Targets.MicrosoftTeams.CoreTest\NLog.Targets.MicrosoftTeams.CoreTest.csproj", "{6E595423-4485-427B-BAD3-EA15A3A2FC09}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NLog.Targets.MicrosoftTeams.Test", "NLog.Targets.MicrosoftTeams.Test\NLog.Targets.MicrosoftTeams.Test.csproj", "{B4D903F3-1ECF-4AD3-8C30-ECEDBB87EA2A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{F1F6735E-83DD-40F8-B764-239F0278BC62}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F1F6735E-83DD-40F8-B764-239F0278BC62}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F1F6735E-83DD-40F8-B764-239F0278BC62}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6E595423-4485-427B-BAD3-EA15A3A2FC09}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6E595423-4485-427B-BAD3-EA15A3A2FC09}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6E595423-4485-427B-BAD3-EA15A3A2FC09}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6E595423-4485-427B-BAD3-EA15A3A2FC09}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4D903F3-1ECF-4AD3-8C30-ECEDBB87EA2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4D903F3-1ECF-4AD3-8C30-ECEDBB87EA2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4D903F3-1ECF-4AD3-8C30-ECEDBB87EA2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4D903F3-1ECF-4AD3-8C30-ECEDBB87EA2A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
