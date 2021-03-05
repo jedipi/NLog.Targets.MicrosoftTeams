@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace NLog.Targets.MicrosoftTeams.CoreTest
+namespace NLog.Targets.MicrosoftTeams.Test
 {
     class Program
     {
@@ -8,7 +8,7 @@ namespace NLog.Targets.MicrosoftTeams.CoreTest
 
         static void Main(string[] args)
         {
-            //_logger.Info("Info.");
+            _logger.Info("Info.");
             _logger.Fatal(new ArgumentException("42"), "Fatal!");
 
             Console.ReadKey();

@@ -1,5 +1,8 @@
 # Changelog
 
+### 1.4.0 - 2021-02-16
+- Support .Net 5.0
+
 ### 1.3.0 - 2021-02-07
 - Support .Net Core 3.1
 

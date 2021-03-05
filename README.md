@@ -1,6 +1,7 @@
 
 [![NuGet version (NLog.Targets.MicrosoftTeams)](https://img.shields.io/nuget/v/NLog.Targets.MicrosoftTeams.svg?style=flat)](https://www.nuget.org/packages/NLog.Targets.MicrosoftTeams)
 [![Build Status](https://dev.azure.com/jedipi/NLog.Targets.MicrosoftTeams/_apis/build/status/jedipi.NLog.Targets.MicrosoftTeams?branchName=master)](https://dev.azure.com/jedipi/NLog.Targets.MicrosoftTeams/_build/latest?definitionId=1&branchName=master)
+[![.NET](https://github.com/jedipi/NLog.Targets.MicrosoftTeams/actions/workflows/dotnet.yml/badge.svg?branch=master)](https://github.com/jedipi/NLog.Targets.MicrosoftTeams/actions/workflows/dotnet.yml)
 ![GitHub](https://img.shields.io/github/license/jedipi/NLog.Targets.MicrosoftTeams)
 [![NuGet downloads](https://img.shields.io/nuget/dt/NLog.Targets.MicrosoftTeams)](https://www.nuget.org/packages/NLog.Targets.MicrosoftTeams)
 [![HitCount](http://hits.dwyl.com/jedipi/NLogTargetsMicrosoftTeams.svg)](https://github.com/jedipi/NLog.Targets.MicrosoftTeams)
@@ -12,7 +13,7 @@ A NLog target that write log to Microsoft Teams channel via O365 Webhook Connect
 
 - Support custom ApplicationName layout
 - Support custom Teams message card title
-- Support .Net Framework, .Net Core, and .Net Standard
+- Support .Net Framework, .Net Core, .Net 5, and .Net Standard
 - Options to configure your Webhook URL in NLog.conf, app.config, or appsetting.json
 
 
@@ -20,19 +21,21 @@ For more Information about webhhoks in Teams read:
 - https://docs.microsoft.com/en-us/microsoftteams/platform/webhooks-and-connectors/what-are-webhooks-and-connectors
 - https://docs.microsoft.com/en-us/microsoftteams/platform/webhooks-and-connectors/how-to/add-incoming-webhook
 
+# Output
+![Example NLog.Targets.MicrosoftTeams output](image/output.png)
 
-# Installation 
+# Getting Started
+### Installation 
+
+Add the NLog.Targets.MicrosoftTeams package from nuget to your project.
 
 ```cmd
 PM> Install-Package NLog.Targets.MicrosoftTeams
 ```
 
-<br><br>
+<br>
 
-# Output
-![Example NLog.Targets.MicrosoftTeams output](image/output.png)
-<br><br>
-# Usage
+### Usage
 ```xml
 <!-- Example app.config -->
 <?xml version="1.0" encoding="utf-8" ?>
@@ -86,7 +89,7 @@ NLog.config
          layout="[${level:uppercase=true}] ${logger} - ${message} ${all-event-properties}"
     />
 ```
-<br><br>
+
 
 # Support
 If you've got value from any of the content which I have created, then I would also very much appreciate your support by buying me a beer.
