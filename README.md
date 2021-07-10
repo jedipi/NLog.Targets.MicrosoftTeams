@@ -8,7 +8,10 @@
 ##### Build History
 [![Build History](https://buildstats.info/github/chart/jedipi/NLog.Targets.MicrosoftTeams?branch=master)](https://github.com/jedipi/NLog.Targets.MicrosoftTeams/actions?query=branch%3Amaster)
 <br><br>
-# NLog.Targets.MicrosoftTeams
+
+# NLog.Targets.MicrosoftTeams 
+![](image/nlog-teams.png)
+<br>
 A NLog target that write log to Microsoft Teams channel via O365 Webhook Connector.
 
 - Support custom ApplicationName layout
