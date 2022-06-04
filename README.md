@@ -58,7 +58,7 @@ NLog.config
 ```xml
 <!-- Example for getting Webhook URL from app.config -->
 <!-- write logs to Microsoft Teams -->
-<target xsi:type="MicrosoftTeams" 
+<target xsi:type="MicrosoftTeams, NLog.Targets.MicrosoftTeams" 
          name="msTeams" 
          WebhookUrl="${appsetting:name=Logging.TeamsUrl}"          
          ApplicationName="Your Application Name"
@@ -71,7 +71,7 @@ NLog.config
 
 <!-- Example for getting Webhook URL from appsetting.json -->
 <!-- write logs to Microsoft Teams -->
-<target xsi:type="MicrosoftTeams" 
+<target xsi:type="MicrosoftTeams, NLog.Targets.MicrosoftTeams" 
          name="msTeams" 
          WebhookUrl="${configsetting:name=Logging.TeamsUrl}"          
          ApplicationName="Your Application Name"
@@ -84,7 +84,7 @@ NLog.config
 
 <!-- Example for setting Webhook URL inside nlog.conf -->
 <!-- write logs to Microsoft Teams -->
-<target xsi:type="MicrosoftTeams" 
+<target xsi:type="MicrosoftTeams, NLog.Targets.MicrosoftTeams" 
          name="msTeams" 
          WebhookUrl="Your Teams Webhook URL here"          
          ApplicationName="Your Application Name"
