@@ -16,7 +16,7 @@ A NLog target that write log to Microsoft Teams channel via O365 Webhook Connect
 
 - Support custom ApplicationName layout
 - Support custom Teams message card title
-- Support .Net Framework, .Net Core, .Net 5, and .Net Standard
+- Support .Net Framework, .Net Core, .Net 5/6/7, and .Net Standard
 - Options to configure your Webhook URL in NLog.conf, app.config, or appsetting.json
 
 
