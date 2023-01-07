@@ -1,11 +1,17 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30907.101
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33110.190
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NLog.Targets.MicrosoftTeams", "NLog.Targets.MicrosoftTeams\NLog.Targets.MicrosoftTeams.csproj", "{F1F6735E-83DD-40F8-B764-239F0278BC62}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NLog.Targets.MicrosoftTeams.Test", "NLog.Targets.MicrosoftTeams.Test\NLog.Targets.MicrosoftTeams.Test.csproj", "{B4D903F3-1ECF-4AD3-8C30-ECEDBB87EA2A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "misc", "misc", "{4A422B13-E18E-4618-8231-6C7FB178FF22}"
+	ProjectSection(SolutionItems) = preProject
+		..\CHANGELOG.md = ..\CHANGELOG.md
+		..\README.md = ..\README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
