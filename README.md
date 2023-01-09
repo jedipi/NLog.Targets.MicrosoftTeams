@@ -7,7 +7,10 @@
 [![HitCount](http://hits.dwyl.com/jedipi/NLogTargetsMicrosoftTeams.svg)](https://github.com/jedipi/NLog.Targets.MicrosoftTeams)
 ##### Build History
 [![Build History](https://buildstats.info/github/chart/jedipi/NLog.Targets.MicrosoftTeams?branch=master)](https://github.com/jedipi/NLog.Targets.MicrosoftTeams/actions?query=branch%3Amaster)
-<br><br>
+##### Stargazers & Forkers
+[![Stargazers repo roster for @jedipi/NLog.Targets.MicrosoftTeams](https://reporoster.com/stars/jedipi/NLog.Targets.MicrosoftTeams)](https://github.com/jedipi/NLog.Targets.MicrosoftTeams/stargazers)
+[![Forkers repo roster for @jedipi/NLog.Targets.MicrosoftTeams](https://reporoster.com/forks/jedipi/NLog.Targets.MicrosoftTeams)](https://github.com/jedipi/NLog.Targets.MicrosoftTeams/network/members)
+
 
 # NLog.Targets.MicrosoftTeams 
 ![](image/nlog-teams.png)
