@@ -1,6 +1,13 @@
 # Changelog
 
-### 2.0.0 - 2023-01-08
+### 5.0.0 - 2023-01-08
+- Add Support for .NET 8
+- Remove support for .Net Core 3.1, .Net Framework
+
+### 4.0.0 - 2023-01-08
+- Add Support for netstandard2.1
+
+### 4.0.0 - 2023-01-08
 - Support .Net 7.0
 
 ### 3.0.0 - 2022-06-04

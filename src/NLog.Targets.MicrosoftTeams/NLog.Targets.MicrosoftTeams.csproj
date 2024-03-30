@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>netstandard2.0;net472;netcoreapp3.1;net5.0;net6;net7.0</TargetFrameworks>
+    <TargetFrameworks>netstandard2.1;net472;net6;net7.0;net8.0</TargetFrameworks>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Description>A NLog target that writes to Microsoft Teams Channel via O365 Webhook Connector.</Description>
     <Copyright>Copyright © Kin Tam 2022</Copyright>
@@ -15,7 +15,7 @@
     <RepositoryUrl>https://github.com/jedipi/NLog.Targets.MicrosoftTeams</RepositoryUrl>
     <PackageIcon>nlog-teams.png</PackageIcon>
     <PackageReadmeFile></PackageReadmeFile>
-    <PackageReleaseNotes>support .NET 7.0</PackageReleaseNotes>
+    <PackageReleaseNotes>add support for net8</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>

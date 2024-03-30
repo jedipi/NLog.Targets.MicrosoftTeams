@@ -4,7 +4,16 @@
 # https://docs.microsoft.com/azure/devops/pipelines/apps/aspnet/build-aspnet-4
 
 trigger:
-- master
+  branches:
+    include:
+    - master
+  paths:
+    include:
+    - NLog.Targets.MicrosoftTeams
+    exclude:
+      - '*.yaml'
+      - '*.yml'
+      - '*.md'
 
 pool:
   vmImage: 'windows-latest'
@@ -16,9 +25,9 @@ variables:
 
 steps:
 - task: UseDotNet@2
-  displayName: 'Use dotnet 7'
+  displayName: 'Use dotnet 8'
   inputs:
-    version: '7.0.x'
+    version: '8.0.x'
 
 - task: NuGetToolInstaller@1
 
