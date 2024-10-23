@@ -2,7 +2,7 @@
 
 namespace NLog.Targets.MicrosoftTeams
 {
-    internal class MicrosoftTeamsMessageFact: MicrosoftTeamsMessageBody
+    internal class MicrosoftTeamsMessageFact
     {
         [JsonProperty("title")]
         public string Name { get; set; }

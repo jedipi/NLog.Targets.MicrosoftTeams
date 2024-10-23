@@ -59,11 +59,13 @@ namespace NLog.Targets.MicrosoftTeams
 
             var applicationName = RenderLogEvent(this.ApplicationName, logEvent);
             var machineName = RenderLogEvent(this.MachineName, logEvent);
+            var level = logEvent.Level.ToString();
 
             facts.Add("Application", applicationName);
             facts.Add("Machine", machineName);
-            facts.Add("Level", logEvent.Level.ToString());
+            facts.Add("Level", level);
             facts.Add("Logger", logEvent.LoggerName);
+            facts.Add("Message", logEvent.Message);
 
             // Add exception fields if exception occurred
             var exception = logEvent.Exception;
@@ -79,7 +81,7 @@ namespace NLog.Targets.MicrosoftTeams
             var webHookUrl = RenderLogEvent(this.WebhookUrl, logEvent);
 
             var client = new MicrosoftTeamsClient(webHookUrl);
-            await client.CreateAndSendMessage(title, logMessage, facts).ConfigureAwait(false);
+            await client.CreateAndSendMessage(title, logMessage, level, facts).ConfigureAwait(false);
         }       
     }
 }

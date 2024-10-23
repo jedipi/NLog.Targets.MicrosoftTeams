@@ -5,22 +5,10 @@ namespace NLog.Targets.MicrosoftTeams
 {
     internal class MicrosoftTeamsMessageCard
     {
-        [JsonProperty("@type")]
-        public string Type { get; } = "MessageCard";
+        [JsonProperty("type")]
+        public string Type { get; } = "message";
 
-        [JsonProperty("@context")]
-        public string Context { get; } = "http://schema.org/extensions";
-
-        [JsonProperty("title")]
-        public string Title { get; set; }
-
-        [JsonProperty("text")]
-        public string Text { get; set; }
-
-        [JsonProperty("themeColor")]
-        public string Color { get; set; }
-
-        [JsonProperty("sections")]
-        public IList<MicrosoftTeamsMessageSection> Sections { get; set; }
+        [JsonProperty("attachments")]
+        public IList<MicrosoftTeamsMessageAttachment> Attachments { get; set; }
     }
 }
