@@ -7,23 +7,23 @@
             switch (level)
             {
                 case "Trace":
-                    return "ffffff";
+                    return "Light";
                 case "Debug":
-                    return "00ff00";
+                    return "Light";
                 case "Info":
-                    return "0094FF";
+                    return "Good";
                 case "Warn":
-                    return "FFE97F";
+                    return "Warning";
 
                 case "Error":
-                    return "d9534f";
+                    return "Attention";
 
                 case "Fatal":
-                    return "d9534f";
+                    return "Attention";
                 case "Off":
-                    return "ffffff";
+                    return "Default";
                 default:
-                    return "777777";
+                    return "Default";
             }
         }
     }

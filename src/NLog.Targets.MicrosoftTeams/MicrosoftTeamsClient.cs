@@ -23,11 +23,13 @@ namespace NLog.Targets.MicrosoftTeams
         /// <param name="logMessage">Log message</param>
         /// <param name="facts"></param>
         /// <returns></returns>
-        public async Task CreateAndSendMessage(string title, string logMessage, Dictionary<string, string> facts)
+        public async Task CreateAndSendMessage(string title, string logMessage, string level, Dictionary<string, string> facts)
         {
-            var message = CreateMessageCard(title, logMessage, facts);
+            var message = CreateMessageCard(title, logMessage, level, facts);
             var json = JsonConvert.SerializeObject(message);
 
+            NLog.Common.InternalLogger.Log(LogLevel.Info, json);
+            
             var response = await SendMessage(json).ConfigureAwait(false);
             if (!response.IsSuccessStatusCode)
             {
@@ -56,30 +58,41 @@ namespace NLog.Targets.MicrosoftTeams
         /// </summary>
         /// <param name="title"></param>
         /// <param name="logMessage"></param>
+        /// <param name="level"></param>
         /// <param name="facts"></param>
         /// <returns></returns>
-        private MicrosoftTeamsMessageCard CreateMessageCard(string title, string logMessage, Dictionary<string, string> facts)
+        private MicrosoftTeamsMessageCard CreateMessageCard(string title, string logMessage, string level, Dictionary<string, string> facts)
         {
-            var level = facts.FirstOrDefault(x => x.Key.StartsWith("Level"));
-
             var request = new MicrosoftTeamsMessageCard
             {
-                Title = title,
-                Text = logMessage,
-                Color = AttachementColor.GetAttachmentColor(level.Value),
-                Sections = new[]
+                Attachments = new[]
                 {
-                    new MicrosoftTeamsMessageSection
+                    new MicrosoftTeamsMessageAttachment()
                     {
-                        Title = "Properties",
-                        Facts = facts.Where(x => !x.Key.StartsWith("Exception")).Select(x => new MicrosoftTeamsMessageFact{ Name = x.Key, Value = x.Value}).ToArray()
-                    },
-                    new MicrosoftTeamsMessageSection
-                    {
-                        Title = "Exception",
-                        Facts = facts.Where(x => x.Key.StartsWith("Exception")).Select(x => new MicrosoftTeamsMessageFact{ Name = x.Key, Value = x.Value}).ToArray()
+                        Content = new MicrosoftTeamsMessageContent()
+                        {
+                            MSteams = new MicrosoftTeamsConfig(),
+
+                            Body = new MicrosoftTeamsMessageBody[]
+                            {
+                                new MicrosoftTeamsMessageBodyTitle
+                                {
+                                    Text = title,
+                                    Color = AttachementColor.GetAttachmentColor(level)
+								},
+                                new MicrosoftTeamsMessageBodyFacts
+                                {
+                                    Facts = facts.Where(x => !x.Key.StartsWith("Exception")).Select(x => new MicrosoftTeamsMessageFact{ Name = x.Key, Value = x.Value}).ToArray()
+                                },
+                                 new MicrosoftTeamsMessageBodyFacts
+                                {
+                                    Facts = facts.Where(x => x.Key.StartsWith("Exception")).Select(x => new MicrosoftTeamsMessageFact{ Name = x.Key, Value = x.Value}).ToArray()
+                                }
+                          }
+                        }
                     }
                 }
+
             };
 
             return request;

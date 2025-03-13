@@ -3,12 +3,14 @@ using Newtonsoft.Json;
 
 namespace NLog.Targets.MicrosoftTeams
 {
-    internal class MicrosoftTeamsMessageSection
+    internal class MicrosoftTeamsMessageBodyFacts : MicrosoftTeamsMessageBody
     {
-        [JsonProperty("title")]
-        public string Title { get; set; }
-
         [JsonProperty("facts")]
         public IList<MicrosoftTeamsMessageFact> Facts { get; set; }
+
+        public MicrosoftTeamsMessageBodyFacts()
+        {
+            Type = "FactSet";
+        }
     }
 }
