@@ -1,11 +1,11 @@
 ﻿
-using Newtonsoft.Json;
+using System.Text.Json.Serialization;
 
 namespace NLog.Targets.MicrosoftTeams
 {
 	internal class MicrosoftTeamsConfig
 	{
-		[JsonProperty("width")]
+		[JsonPropertyName("width")]
 		public string Width { get; set; } = "Full";
 	}
 }

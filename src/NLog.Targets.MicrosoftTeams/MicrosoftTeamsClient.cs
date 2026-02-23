@@ -2,14 +2,19 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
+using System.Text.Json;
 using System.Threading.Tasks;
-using Newtonsoft.Json;
 
 namespace NLog.Targets.MicrosoftTeams
 {
     public class MicrosoftTeamsClient
     {
         private readonly Uri _uri;
+
+        private static readonly JsonSerializerOptions _jsonOptions = new JsonSerializerOptions
+        {
+            Converters = { new MicrosoftTeamsMessageBodyConverter() }
+        };
 
         public MicrosoftTeamsClient(string url)
         {
@@ -26,7 +31,7 @@ namespace NLog.Targets.MicrosoftTeams
         public async Task CreateAndSendMessage(string title, string logMessage, string level, Dictionary<string, string> facts)
         {
             var message = CreateMessageCard(title, logMessage, level, facts);
-            var json = JsonConvert.SerializeObject(message);
+            var json = JsonSerializer.Serialize(message, _jsonOptions);
 
             NLog.Common.InternalLogger.Log(LogLevel.Info, json);
             

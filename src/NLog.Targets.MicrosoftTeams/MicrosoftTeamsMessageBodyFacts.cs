@@ -1,11 +1,11 @@
 ﻿using System.Collections.Generic;
-using Newtonsoft.Json;
+using System.Text.Json.Serialization;
 
 namespace NLog.Targets.MicrosoftTeams
 {
     internal class MicrosoftTeamsMessageBodyFacts : MicrosoftTeamsMessageBody
     {
-        [JsonProperty("facts")]
+        [JsonPropertyName("facts")]
         public IList<MicrosoftTeamsMessageFact> Facts { get; set; }
 
         public MicrosoftTeamsMessageBodyFacts()

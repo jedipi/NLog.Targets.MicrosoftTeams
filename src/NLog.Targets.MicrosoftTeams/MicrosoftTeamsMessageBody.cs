@@ -1,10 +1,10 @@
-﻿using Newtonsoft.Json;
+﻿using System.Text.Json.Serialization;
 
 namespace NLog.Targets.MicrosoftTeams
 {
 	internal abstract class MicrosoftTeamsMessageBody
 	{
-		[JsonProperty("type")]
+		[JsonPropertyName("type")]
 		public string Type { get; set; } = "TextBlock";
 
 	}

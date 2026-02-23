@@ -1,14 +1,14 @@
 ﻿using System.Collections.Generic;
-using Newtonsoft.Json;
+using System.Text.Json.Serialization;
 
 namespace NLog.Targets.MicrosoftTeams
 {
     internal class MicrosoftTeamsMessageCard
     {
-        [JsonProperty("type")]
+        [JsonPropertyName("type")]
         public string Type { get; } = "message";
 
-        [JsonProperty("attachments")]
+        [JsonPropertyName("attachments")]
         public IList<MicrosoftTeamsMessageAttachment> Attachments { get; set; }
     }
 }

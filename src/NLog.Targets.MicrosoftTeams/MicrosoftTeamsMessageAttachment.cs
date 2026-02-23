@@ -1,13 +1,13 @@
-﻿using Newtonsoft.Json;
+﻿using System.Text.Json.Serialization;
 
 namespace NLog.Targets.MicrosoftTeams
 {
 	internal class MicrosoftTeamsMessageAttachment
 	{
-		[JsonProperty("contentType")]
+		[JsonPropertyName("contentType")]
 		public string ContentType { get; set; } = "application/vnd.microsoft.card.adaptive";
 
-		[JsonProperty("content")]
+		[JsonPropertyName("content")]
 		public MicrosoftTeamsMessageContent Content { get; set; }
 	}
 }

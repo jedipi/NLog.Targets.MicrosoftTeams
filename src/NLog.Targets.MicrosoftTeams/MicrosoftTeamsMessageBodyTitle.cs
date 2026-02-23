@@ -1,25 +1,22 @@
-﻿using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Text.Json.Serialization;
 
 namespace NLog.Targets.MicrosoftTeams
 {
 	internal class MicrosoftTeamsMessageBodyTitle: MicrosoftTeamsMessageBody
 	{
-		[JsonProperty("size")]
+		[JsonPropertyName("size")]
 		public string Size { get; set; } = "Medium";
 
-		[JsonProperty("weight")]
+		[JsonPropertyName("weight")]
 		public string Weight { get; set; } = "Bolder";
 
-		[JsonProperty("color")]
+		[JsonPropertyName("color")]
 		public string Color { get; set; }
 
-		[JsonProperty("wrap")]
+		[JsonPropertyName("wrap")]
 		public bool wrap { get; set; } = true;
 
-		[JsonProperty("text")]
+		[JsonPropertyName("text")]
 		public string Text { get; set; }
 	}
 }

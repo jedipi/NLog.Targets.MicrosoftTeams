@@ -1,13 +1,13 @@
-﻿using Newtonsoft.Json;
+﻿using System.Text.Json.Serialization;
 
 namespace NLog.Targets.MicrosoftTeams
 {
     internal class MicrosoftTeamsMessageFact: MicrosoftTeamsMessageBody
     {
-        [JsonProperty("title")]
+        [JsonPropertyName("title")]
         public string Name { get; set; }
 
-        [JsonProperty("value")]
+        [JsonPropertyName("value")]
         public string Value { get; set; }
     }
 }
