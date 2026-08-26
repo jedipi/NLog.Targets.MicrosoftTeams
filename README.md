@@ -85,7 +85,7 @@ NLog.config
 
 ```xml
 
-<!-- Example for setting Webhook URL inside nlog.conf -->
+<!-- Example for setting Webhook URL inside nlog.config -->
 <!-- write logs to Microsoft Teams -->
 <target xsi:type="MicrosoftTeams, NLog.Targets.MicrosoftTeams" 
          name="msTeams" 

@@ -23,27 +23,23 @@ namespace NLog.Targets.MicrosoftTeams
         /// <param name="logMessage">Log message</param>
         /// <param name="facts"></param>
         /// <returns></returns>
-        public async Task CreateAndSendMessage(string title, string logMessage, string level, Dictionary<string, string> facts)
+        public async Task CreateAndSendMessage(string title, string level, Dictionary<string, string> facts)
         {
-            var message = CreateMessageCard(title, logMessage, level, facts);
-            var json = JsonConvert.SerializeObject(message);
+            var message = CreateMessageCard(title, level, facts);
+            var jsonContent = JsonConvert.SerializeObject(message);
 
-            NLog.Common.InternalLogger.Log(LogLevel.Info, json);
+            NLog.Common.InternalLogger.Debug("MicrosoftTeamsTarget - JSON:{0}{1}", Environment.NewLine, jsonContent);
             
-            var response = await SendMessage(json).ConfigureAwait(false);
-            if (!response.IsSuccessStatusCode)
-            {
-                throw new InvalidOperationException($"Rest Call Failed - {response.ReasonPhrase}");
-            }
+            var response = await SendMessage(jsonContent).ConfigureAwait(false);
+            response.EnsureSuccessStatusCode(); // Throws when not success http statuscode
         }
 
         /// <summary>
         /// posts the message to the url
         /// </summary>
-        /// <param name="logMessage"></param>
-        private async Task<HttpResponseMessage> SendMessage(string logMessage)
+        private async Task<HttpResponseMessage> SendMessage(string jsonContent)
         {
-            var messageContent = new StringContent(logMessage);
+            var messageContent = new StringContent(jsonContent);
             messageContent.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
 
             using (var httpClient = new HttpClient())
@@ -56,12 +52,7 @@ namespace NLog.Targets.MicrosoftTeams
         /// <summary>
         /// Creates the Message string with card title
         /// </summary>
-        /// <param name="title"></param>
-        /// <param name="logMessage"></param>
-        /// <param name="level"></param>
-        /// <param name="facts"></param>
-        /// <returns></returns>
-        private MicrosoftTeamsMessageCard CreateMessageCard(string title, string logMessage, string level, Dictionary<string, string> facts)
+        private MicrosoftTeamsMessageCard CreateMessageCard(string title, string level, Dictionary<string, string> facts)
         {
             var request = new MicrosoftTeamsMessageCard
             {
